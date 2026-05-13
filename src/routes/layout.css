@@ -1,10 +1,15 @@
+@import 'tailwindcss';
+@import '@fontsource/fira-mono';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
 @font-face {
 	font-family: 'Inter';
 	src: url('../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
 	font-style: normal;
 	font-weight: 100 900;
 	font-display: swap;
-	
 }
 @font-face {
 	font-family: 'Handwrite';
@@ -12,13 +17,25 @@
 	font-style: normal;
 	font-weight: 100 900;
 	font-display: swap;
-	
 }
 
-@import 'tailwindcss';
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography';
-@import '@fontsource/fira-mono';
+:root {
+	--bg-deep: #0b0f1a;
+	--brand-primary: #4da3ff;
+	--brand-accent: #7cc4ff;
+	--text-main: #e6edf7;
+	--text-muted: #9aa4b2;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--bg-deep: #ffffff;
+		--brand-primary: #0066cc;
+		--brand-accent: #004499;
+		--text-main: #1a1a1a;
+		--text-muted: #666666;
+	}
+}
 
 @theme {
 	--color-bg-deep: var(--bg-deep);
@@ -38,23 +55,17 @@
 	--ease-wave: cubic-bezier(0.4, 0, 0.2, 1);
 	--animate-wave-flow: wave-flow 8s infinite linear;
 
-	--keyframes-wave-flow: {
-		0% {
-			transform: translateY(0) scaleY(1);
-		}
-		50% {
-			transform: translateY(-4px) scaleY(1.02);
-		}
-		100% {
-			transform: translateY(0) scaleY(1);
-		}
-	};
+	--keyframes-wave-flow: wave-flow;
 }
 
-:root {
-	--bg-deep: #0b0f1a;
-	--brand-primary: #4da3ff;
-	--brand-accent: #7cc4ff;
-	--text-main: #e6edf7;
-	--text-muted: #9aa4b2;
+@keyframes wave-flow {
+	0% {
+		transform: translateY(0) scaleY(1);
+	}
+	50% {
+		transform: translateY(-4px) scaleY(1.02);
+	}
+	100% {
+		transform: translateY(0) scaleY(1);
+	}
 }
