@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Inter';
+	src: url('../assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	
+}
+@font-face {
+	font-family: 'Handwrite';
+	src: url('../assets/fonts/Playwrite-IE/PlaywriteIE-VariableFont_wght.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	
+}
+
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@import '@fontsource/fira-mono';
+
+@theme {
+	--color-bg-deep: var(--bg-deep);
+	--color-brand-primary: var(--brand-primary);
+	--color-brand-accent: var(--brand-accent);
+	--color-text-main: var(--text-main);
+	--color-text-muted: var(--text-muted);
+
+	--font-sans: 'Inter', system-ui, sans-serif;
+	--font-handwritten: 'Handwrite', cursive;
+
+	--spacing-section-y: 4rem;
+	--spacing-section-y-lg: 5rem;
+	--spacing-card-p: 1rem;
+	--spacing-card-p-lg: 1.5rem;
+
+	--ease-wave: cubic-bezier(0.4, 0, 0.2, 1);
+	--animate-wave-flow: wave-flow 8s infinite linear;
+
+	--keyframes-wave-flow: {
+		0% {
+			transform: translateY(0) scaleY(1);
+		}
+		50% {
+			transform: translateY(-4px) scaleY(1.02);
+		}
+		100% {
+			transform: translateY(0) scaleY(1);
+		}
+	};
+}
+
+:root {
+	--bg-deep: #0b0f1a;
+	--brand-primary: #4da3ff;
+	--brand-accent: #7cc4ff;
+	--text-main: #e6edf7;
+	--text-muted: #9aa4b2;
+}
