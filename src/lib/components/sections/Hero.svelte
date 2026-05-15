@@ -85,7 +85,7 @@
 			</a>
 
 			<a
-				href={'/resume-timmy.txt'}
+				href={'/portfolio-resume.docx'}
 				download
 				class="rounded-lg border border-[#f5b86b]/25 bg-[#f5b86b]/10 px-5 py-2.5 text-sm font-semibold text-[#f5b86b] transition duration-300 ease-wave hover:-translate-y-0.5 hover:bg-[#f5b86b]/15 focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
 			>

@@ -44,7 +44,7 @@
 
 		<div class="flex items-center gap-2">
 			<a
-				href={resolve('/resume-timmy.txt')}
+				href={resolve('/portfolio-resume.docx')}
 				download
 				class="hidden rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm font-semibold text-text-main transition duration-300 ease-wave hover:-translate-y-0.5 hover:border-brand-primary/30 hover:bg-white/10 focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent sm:inline-flex"
 			>

@@ -56,7 +56,7 @@
 					GitHub
 				</a>
 				<a
-					href={'/resume-timmy.txt'}
+					href={'/portfolio-resume.docx'}
 					download
 					class="rounded-lg bg-brand-primary px-4 py-2 text-sm font-semibold text-bg-deep transition hover:-translate-y-0.5 hover:bg-brand-accent focus:outline focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
 				>
