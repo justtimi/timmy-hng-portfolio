@@ -55,8 +55,8 @@
 			data-hero-reveal
 			class="max-w-3xl text-4xl leading-[1.02] font-bold tracking-tight text-text-main sm:text-5xl md:text-6xl"
 		>
-			I turn curls, waves, and honest feeling into
-			<span class="text-brand-accent">interfaces that move with intent.</span>
+			I build
+			<span class="text-brand-accent">expressive</span> interfaces.
 		</h1>
 
 		<p data-hero-reveal class="font-handwritten text-2xl leading-none text-[#f5b86b] sm:text-3xl">
@@ -64,9 +64,9 @@
 		</p>
 
 		<p data-hero-reveal class="max-w-2xl text-base leading-7 text-text-muted md:text-lg">
-			My illustrations usually begin with curves because I wear my heart on my sleeve. My frontend
-			work follows the same instinct: expressive, structured, and clear enough to feel alive without
-			becoming noisy.
+			I’m a frontend engineer focused on turning ideas into responsive, animated web experiences. I
+			care about how interfaces feel — not just how they look or function — and I use tools like
+			React, Tailwind, and motion design to bring that balance to life.
 		</p>
 
 		<div data-hero-reveal class="flex flex-wrap items-center gap-3 pt-2">
@@ -104,7 +104,7 @@
 			</a>
 			<span aria-hidden="true">/</span>
 			<a
-				href="mailto:hello@example.com"
+				href="mailto:afolayant537@gmail.com"
 				class="rounded-md py-1 font-semibold transition hover:text-brand-accent focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
 			>
 				Email

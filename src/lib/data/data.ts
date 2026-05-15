@@ -15,8 +15,8 @@ export const projects: Project[] = [
 		tech: ['React', 'API', 'Tailwind'],
 		category: 'Product UI',
 		image: aiSummarizer,
-		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
-		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio',
+		liveUrl: 'https://chrome-extension-hng-frontend.vercel.app/',
+		githubUrl: 'https://github.com/justtimi/chrome-extension-hng-frontend',
 		featured: true
 	},
 	{
@@ -27,8 +27,8 @@ export const projects: Project[] = [
 		tech: ['React', 'TypeScript', 'CSS'],
 		category: 'Product UI',
 		image: invoiceManager,
-		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
-		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio',
+		liveUrl: 'https://stage-2-invoice-management.vercel.app/',
+		githubUrl: 'https://github.com/justtimi/stage-2-invoice-management',
 		featured: true
 	},
 	{
@@ -39,8 +39,8 @@ export const projects: Project[] = [
 		tech: ['JavaScript', 'Local State', 'UI Design'],
 		category: 'Product UI',
 		image: habitTracker,
-		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
-		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio'
+		liveUrl: 'https://habit-tracker-pwa-lac.vercel.app/',
+		githubUrl: 'https://github.com/justtimi/habit-tracker-pwa'
 	},
 	{
 		id: 'task-card',
@@ -50,8 +50,8 @@ export const projects: Project[] = [
 		tech: ['HTML', 'CSS', 'Responsive UI'],
 		category: 'Component Study',
 		image: taskCard,
-		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
-		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio'
+		liveUrl: 'https://stage-1a-hng-task-card.vercel.app/',
+		githubUrl: 'https://github.com/justtimi/https://vercel.com/stage-1a-hng-task-card'
 	},
 	{
 		id: 'profile-card',
@@ -61,8 +61,8 @@ export const projects: Project[] = [
 		tech: ['HTML', 'CSS', 'Component UI'],
 		category: 'Component Study',
 		image: profileCard,
-		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
-		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio'
+		liveUrl: 'https://stage-1a-hng-profile-card.vercel.app/',
+		githubUrl: 'https://github.com/justtimi/stage-1a-hng-profile-card'
 	},
 	{
 		id: 'bento-grid',
