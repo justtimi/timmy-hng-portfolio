@@ -1,0 +1,28 @@
+Timmy - Frontend Engineer
+
+Focus
+Frontend interfaces, motion-driven UI, responsive layouts, and Svelte/SvelteKit experiences.
+
+Portfolio Narrative
+I draw curls, waves, vines, and expressive line work. This portfolio translates that illustration language into interactive frontend systems: animated story paths, structured sections, and responsive project cards.
+
+Core Skills
+- SvelteKit
+- TypeScript
+- Tailwind CSS
+- GSAP animation
+- Responsive UI engineering
+- Accessibility-minded interaction design
+- Component architecture
+
+Selected Work
+- AI Summarizer
+- Invoice Manager
+- Habit Tracker
+- Task Card
+- Profile Card
+- Bento Grid
+
+Links
+GitHub: https://github.com/justtimi
+Portfolio: https://timmy-hng-portfolio.vercel.app/

@@ -1,38 +1,77 @@
 import { type Project } from '$lib/types/projects';
+import aiSummarizer from '../../assets/images/projects/ai-summarizer.png';
+import bentoGrid from '../../assets/images/projects/bento-grid.jpg';
+import habitTracker from '../../assets/images/projects/habit-tracker.png';
+import invoiceManager from '../../assets/images/projects/invoice-manager.png';
+import profileCard from '../../assets/images/projects/profile-card.png';
+import taskCard from '../../assets/images/projects/task-card.png';
 
 export const projects: Project[] = [
 	{
-		id: 'devops-dashboard',
-		title: 'Real-Time DevOps Dashboard',
+		id: 'ai-summarizer',
+		title: 'AI Summarizer',
 		description:
-			'A live monitoring system with real-time metrics visualization and system health tracking.',
-		tech: ['Vue', 'WebSockets', 'Chart.js', 'Tailwind'],
-		image: '/assets/projects/devops.png',
-		liveUrl: '#',
-		githubUrl: '#',
+			'A focused reading tool that turns long-form content into clean, scannable summaries.',
+		tech: ['React', 'API', 'Tailwind'],
+		category: 'Product UI',
+		image: aiSummarizer,
+		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
+		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio',
 		featured: true
 	},
-
 	{
-		id: 'svelte-portfolio',
-		title: 'Interactive Developer Portfolio',
+		id: 'invoice-manager',
+		title: 'Invoice Manager',
 		description:
-			'A cinematic portfolio experience built with SvelteKit, GSAP, and motion-driven UI systems.',
-		tech: ['SvelteKit', 'GSAP', 'Tailwind'],
-		image: '/assets/projects/portfolio.png',
-		liveUrl: '#',
-		githubUrl: '#',
+			'A compact finance interface for creating, tracking, and organizing invoices with clarity.',
+		tech: ['React', 'TypeScript', 'CSS'],
+		category: 'Product UI',
+		image: invoiceManager,
+		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
+		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio',
 		featured: true
 	},
-
 	{
-		id: 'ui-experiment-wave',
-		title: 'Wave Motion UI System',
+		id: 'habit-tracker',
+		title: 'Habit Tracker',
 		description:
-			'Experimental interface exploring fluid motion design and interaction-driven UI components.',
-		tech: ['Svelte', 'CSS Animations', 'GSAP'],
-		image: '/assets/projects/wave-ui.png',
-		liveUrl: '#',
-		githubUrl: '#'
+			'A daily progress system built around simple visual feedback and repeatable routines.',
+		tech: ['JavaScript', 'Local State', 'UI Design'],
+		category: 'Product UI',
+		image: habitTracker,
+		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
+		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio'
+	},
+	{
+		id: 'task-card',
+		title: 'Task Card',
+		description:
+			'A polished task component exploring hierarchy, spacing, and quick status recognition.',
+		tech: ['HTML', 'CSS', 'Responsive UI'],
+		category: 'Component Study',
+		image: taskCard,
+		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
+		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio'
+	},
+	{
+		id: 'profile-card',
+		title: 'Profile Card',
+		description:
+			'A personal identity card with careful spacing, visual contrast, and compact content.',
+		tech: ['HTML', 'CSS', 'Component UI'],
+		category: 'Component Study',
+		image: profileCard,
+		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
+		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio'
+	},
+	{
+		id: 'bento-grid',
+		title: 'Bento Grid',
+		description: 'A layout study in dense composition, responsive cards, and fast visual scanning.',
+		tech: ['CSS Grid', 'Responsive Design', 'Layout'],
+		category: 'Layout System',
+		image: bentoGrid,
+		liveUrl: 'https://timmy-hng-portfolio.vercel.app/projects',
+		githubUrl: 'https://github.com/justtimi/timmy-hng-portfolio'
 	}
 ];

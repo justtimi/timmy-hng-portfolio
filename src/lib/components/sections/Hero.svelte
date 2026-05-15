@@ -1,73 +1,166 @@
-<div class="py-section-y max-w-6xl mx-auto px-6 md:px-8">
-  <div class="flex flex-col items-start gap-5 max-w-2xl">
+<script lang="ts">
+	import { resolve } from '$app/paths';
+	import { onMount } from 'svelte';
+	import { scrollFade } from '$lib/actions/scrollFade';
+	import profileImage from '../../../assets/images/profile/profile.jpg';
 
-    <span class="inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold tracking-wider uppercase bg-black/20 border border-white/10 rounded-full text-brand-primary animate-wave-flow">
-      <span class="w-1.5 h-1.5 rounded-full bg-brand-accent animate-pulse"></span>
-      Experience in motion
-    </span>
+	let heroEl: HTMLElement;
 
-    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-text-main leading-[1.1]">
-      I design interfaces that behave like
-      <br class="hidden sm:inline" />
-      <span class="text-transparent bg-clip-text bg-linear-to-r from-brand-primary to-brand-accent">
-        living systems.
-      </span>
-    </h1>
+	onMount(() => {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    <p class="font-handwritten text-2xl md:text-3xl text-brand-accent -rotate-1 origin-left select-none">
-      “Hi, I’m Timmy.”
-    </p>
+		void (async () => {
+			const { gsap } = await import('gsap');
 
-    <p class="text-text-muted text-base md:text-lg max-w-xl leading-relaxed">
-      Frontend engineer focused on interactive experiences, structured UI systems, and motion that feels intentional — not decorative.
-    </p>
+			gsap
+				.timeline({ defaults: { ease: 'power3.out' } })
+				.from(heroEl.querySelectorAll('[data-hero-reveal]'), {
+					y: 24,
+					autoAlpha: 0,
+					duration: 0.8,
+					stagger: 0.1
+				})
+				.from(
+					heroEl.querySelector('[data-profile-reveal]'),
+					{
+						y: 20,
+						autoAlpha: 0,
+						scale: 0.97,
+						duration: 0.85
+					},
+					'-=0.35'
+				);
+		})();
+	});
+</script>
 
-    <div class="flex items-center gap-4 pt-2">
-      <a
-        href="#projects"
-        class="px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-primary text-bg-deep hover:bg-brand-accent hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 ease-wave"
-      >
-        View Projects
-      </a>
+<div
+	bind:this={heroEl}
+	class="relative mx-auto grid min-h-[88vh] max-w-6xl items-center gap-10 px-6 py-section-y md:grid-cols-[1.05fr_0.95fr] md:px-8"
+>
+	<div
+		class="absolute inset-x-6 top-8 h-px bg-linear-to-r from-transparent via-white/15 to-transparent"
+	></div>
 
-      <a
-        href="#contact"
-        class="px-5 py-2.5 rounded-xl text-sm font-semibold bg-white/5 border border-white/10 text-text-main hover:bg-white/10 transition-colors duration-300 ease-wave"
-      >
-        Contact
-      </a>
-    </div>
+	<div class="relative z-10 flex max-w-3xl flex-col items-start gap-5">
+		<span
+			data-hero-reveal
+			class="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold tracking-[0.18em] text-brand-accent uppercase"
+		>
+			<span class="h-1.5 w-1.5 rounded-full bg-[#f5b86b]"></span>
+			Timmy / Frontend Engineer
+		</span>
 
-  </div>
+		<h1
+			data-hero-reveal
+			class="max-w-3xl text-4xl leading-[1.02] font-bold tracking-tight text-text-main sm:text-5xl md:text-6xl"
+		>
+			I turn curls, waves, and honest feeling into
+			<span class="text-brand-accent">interfaces that move with intent.</span>
+		</h1>
 
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
+		<p data-hero-reveal class="font-handwritten text-2xl leading-none text-[#f5b86b] sm:text-3xl">
+			Hi, I'm Timmy.
+		</p>
 
-    <div class="p-card-p-lg bg-white/5 border border-white/10 rounded-2xl hover:border-brand-primary/20 transition-all duration-500 ease-wave">
-      <h3 class="text-base font-semibold text-text-main">
-        Experience-first design
-      </h3>
-      <p class="text-text-muted text-sm mt-2 leading-relaxed">
-        Every interface is designed around how it feels, not just how it looks.
-      </p>
-    </div>
+		<p data-hero-reveal class="max-w-2xl text-base leading-7 text-text-muted md:text-lg">
+			My illustrations usually begin with curves because I wear my heart on my sleeve. My frontend
+			work follows the same instinct: expressive, structured, and clear enough to feel alive without
+			becoming noisy.
+		</p>
 
-    <div class="p-card-p-lg bg-white/5 border border-white/10 rounded-2xl hover:border-brand-primary/20 transition-all duration-500 ease-wave">
-      <h3 class="text-base font-semibold text-text-main">
-        Motion with intention
-      </h3>
-      <p class="text-text-muted text-sm mt-2 leading-relaxed">
-        Animations guide attention and reinforce structure — never decoration.
-      </p>
-    </div>
+		<div data-hero-reveal class="flex flex-wrap items-center gap-3 pt-2">
+			<a
+				href="#projects"
+				class="rounded-lg bg-brand-primary px-5 py-2.5 text-sm font-semibold text-bg-deep transition duration-300 ease-wave hover:-translate-y-0.5 hover:bg-brand-accent focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
+			>
+				View Projects
+			</a>
 
-    <div class="p-card-p-lg bg-white/5 border border-white/10 rounded-2xl hover:border-brand-primary/20 transition-all duration-500 ease-wave">
-      <h3 class="text-base font-semibold text-text-main">
-        Clean engineering
-      </h3>
-      <p class="text-text-muted text-sm mt-2 leading-relaxed">
-        Modular components, scalable structure, and production-ready architecture.
-      </p>
-    </div>
+			<a
+				href="#contact"
+				class="rounded-lg border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-text-main transition duration-300 ease-wave hover:-translate-y-0.5 hover:bg-white/10 focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
+			>
+				Contact Me
+			</a>
 
-  </section>
+			<a
+				href={'/resume-timmy.txt'}
+				download
+				class="rounded-lg border border-[#f5b86b]/25 bg-[#f5b86b]/10 px-5 py-2.5 text-sm font-semibold text-[#f5b86b] transition duration-300 ease-wave hover:-translate-y-0.5 hover:bg-[#f5b86b]/15 focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
+			>
+				Resume
+			</a>
+		</div>
+
+		<div data-hero-reveal class="flex flex-wrap items-center gap-3 text-sm text-text-muted">
+			<a
+				href="https://github.com/justtimi"
+				target="_blank"
+				rel="noreferrer"
+				class="rounded-md py-1 font-semibold transition hover:text-brand-accent focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
+			>
+				GitHub
+			</a>
+			<span aria-hidden="true">/</span>
+			<a
+				href="mailto:hello@example.com"
+				class="rounded-md py-1 font-semibold transition hover:text-brand-accent focus:outline-2 focus:outline-offset-4 focus:outline-brand-accent"
+			>
+				Email
+			</a>
+		</div>
+	</div>
+
+	<div
+		data-profile-reveal
+		class="relative z-10 justify-self-center md:justify-self-end"
+		aria-label="Portrait of Timmy"
+	>
+		<svg
+			class="pointer-events-none absolute -top-8 -left-8 z-0 h-40 w-40 text-brand-accent/35 md:-top-10 md:-left-12 md:h-52 md:w-52"
+			viewBox="0 0 220 220"
+			aria-hidden="true"
+		>
+			<path
+				d="M152 33C91 14 35 50 48 99c11 42 78 18 64-15-12-28-58-13-64 28-8 52 53 89 116 54"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="3"
+				stroke-linecap="round"
+				stroke-dasharray="10 12"
+			/>
+		</svg>
+
+		<div
+			class="absolute -inset-4 rounded-lg border border-brand-primary/15 bg-brand-primary/5"
+		></div>
+		<div
+			class="absolute -right-3 -bottom-3 h-28 w-28 rounded-lg border border-[#f5b86b]/20 bg-[#f5b86b]/10"
+		></div>
+
+		<figure
+			class="relative overflow-hidden rounded-lg border border-white/10 bg-white/4 p-3 shadow-2xl shadow-black/30"
+		>
+			<div class="aspect-4/5 w-full max-w-92 overflow-hidden rounded-md bg-white/5">
+				<img src={profileImage} alt="Timmy" class="h-full w-full object-cover" loading="eager" />
+			</div>
+
+			<figcaption
+				class="mt-3 flex items-center justify-between gap-4 text-xs font-semibold tracking-[0.14em] text-text-muted uppercase"
+			>
+				<span>Frontend</span>
+				<span class="text-brand-accent">Motion UI</span>
+			</figcaption>
+		</figure>
+	</div>
+
+	<a
+		use:scrollFade
+		href="#about"
+		class="absolute bottom-6 left-6 hidden items-center gap-2 text-xs font-semibold tracking-[0.16em] text-text-muted uppercase transition hover:text-brand-accent md:flex"
+	>
+		<span class="h-8 w-px animate-wave-flow bg-brand-accent/60"></span>
+		Scroll
+	</a>
 </div>
